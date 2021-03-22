@@ -19,7 +19,7 @@ return function () {
             presets: ['@babel/preset-env']
         }))
         .pipe(dest('./dist/js'))
-        .pipe(dest(backendPath));
+        .pipe(dest(backendPath + "js"));
 
     }
 };
