@@ -20,12 +20,13 @@
             crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="js/feedbackWidget.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
 </head>
 <body>
 
 
 <div id="feedback" class="alert" role="alert">
-    <p>Veel succes met deze module!</p>
+
 </div>
 
 <button id="ok-button">OK</button>
@@ -35,11 +36,30 @@
         const feedbackWidget = new FeedbackWidget("feedback");
 
         $("#ok-button").on("click", function(){
-            feedbackWidget.show("feedback", "testing message");
+            feedbackWidget.show("testing message", "success");
         });
     });
+
+    function afterInit() {
+        console.log('Game init voltooid')
+    }
+
+    $(function(){
+        Game.init(afterInit);
+    })
 </script>
 
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

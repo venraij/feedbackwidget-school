@@ -9,7 +9,7 @@
     <script type="text/javascript" src="jasmine/lib/jasmine/boot.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="../js/feedbackWidget.js"></script>
-
+    <script type="text/javascript" src="../js/game.js"></script>
 </head>
 <body>
 
@@ -39,6 +39,30 @@
             const feedbackWidget = new FeedbackWidget("feedback");
             expect($("#feedback")).toBeDefined();
             expect($("#feedback").attr('style')).toBe('display:none');
+        })
+    })
+
+    describe("Game module exists", function () {
+        it("Game available in global scope", function () {
+            expect(Game).not.toEqual(null);
+        })
+    })
+
+    describe("Game module init", function () {
+        it("Function init exists", function () {
+            expect(typeof Game.init()).not.toEqual(null);
+        })
+    })
+
+    describe("Game Model module init", function () {
+        it("Function init exists", function () {
+            expect(typeof Game.Model.init()).not.toEqual(null);
+        })
+    })
+
+    describe("Game Data module init", function () {
+        it("Function init exists", function () {
+            expect(typeof Game.Data.init()).not.toEqual(null);
         })
     })
 
