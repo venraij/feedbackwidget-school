@@ -37,7 +37,7 @@ Game.Data = (function() {
     let configMap = {
         mock: [
             {
-                url: api/Spel/Beurt,
+                url: 'api/Spel/Beurt',
                 data: 0
             }
         ]

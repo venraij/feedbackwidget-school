@@ -8,7 +8,7 @@ class FeedbackWidget{
     show(message, type) {
         const x = document.getElementById(this.elementId);
         x.style.display = "block";
-        $(`#${this.elementId}`).text(message);
+        $(`#${this.elementId} .message`).text(message);
 
         if (type === "success") {
             $(`#${this.elementId}`).addClass("alert-success");
